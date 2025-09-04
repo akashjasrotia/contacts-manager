@@ -42,7 +42,7 @@ export default function Home() {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const res = await fetch("http://localhost:3000/contacts",{
+        const res = await fetch("https://contacts-manager-y75i.onrender.com/contacts",{
           credentials:'include',
         });
         const data = await res.json();
@@ -173,3 +173,4 @@ export default function Home() {
     </div>
   );
 }
+
