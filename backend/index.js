@@ -131,7 +131,13 @@ app.post("/login", async (req, res) => {
       return res.status(400).json({ message: "Invalid password" });
     }
     const token = jwt.sign({ _id: user._id, email: user.email }, "akash");
-    res.cookie("token", token);
+    res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,        // only over HTTPS
+  sameSite: "none",    // allow cross-site cookies
+  maxAge: 24 * 60 * 60 * 1000, // 1 day
+});
+
 
     res.status(200).json({ message: "Login successful", user });
   } catch (err) {
@@ -158,4 +164,5 @@ app.post('/logout',async (req,res)=>{
 app.listen(3000, () => {
   console.log("listening to port 3000");
 });
+
 
