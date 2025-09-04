@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend URL
+    origin: "https://contacts-manager-pink.vercel.app", // frontend URL
     credentials: true,
   })
 );
@@ -158,3 +158,4 @@ app.post('/logout',async (req,res)=>{
 app.listen(3000, () => {
   console.log("listening to port 3000");
 });
+
