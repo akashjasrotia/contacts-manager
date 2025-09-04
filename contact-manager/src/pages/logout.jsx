@@ -7,7 +7,7 @@ export default function LogoutPage() {
   useEffect(() => {
     const logout = async () => {
       try {
-        const res = await fetch("http://localhost:3000/logout", {
+        const res = await fetch("https://contacts-manager-y75i.onrender.com/logout", {
           method: "POST",
           credentials: "include",
         });
@@ -29,3 +29,4 @@ export default function LogoutPage() {
     </div>
   );
 }
+
