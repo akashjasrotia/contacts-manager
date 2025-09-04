@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+@font-face {
+  font-family: 'poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@theme{
+  --font-poppins:poppins,sans-rerif;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
