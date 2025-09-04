@@ -7,7 +7,7 @@ export default function UserIndicator() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch("http://localhost:3000/me", {
+        const res = await fetch("https://contacts-manager-y75i.onrender.com/me", {
           credentials: "include",
         });
         if (res.ok) {
@@ -38,3 +38,4 @@ export default function UserIndicator() {
     </div>
   );
 }
+
