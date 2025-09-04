@@ -12,7 +12,7 @@ export default function DeleteContactButton({ contactId, onDeleted }) {
 
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:3000/contacts/${contactId}`, {
+      const res = await fetch(`https://contacts-manager-y75i.onrender.com/${contactId}`, {
         method: "DELETE",
       });
 
@@ -46,3 +46,4 @@ export default function DeleteContactButton({ contactId, onDeleted }) {
     </button>
   );
 }
+
