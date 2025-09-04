@@ -17,7 +17,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3000/login", {
+      const res = await fetch("https://contacts-manager-y75i.onrender.com/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -79,3 +79,4 @@ export default function Login() {
     </div>
   );
 }
+
