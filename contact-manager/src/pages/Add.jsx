@@ -29,7 +29,7 @@ export default function AddContact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3000/add", {
+      const res = await fetch("https://contacts-manager-y75i.onrender.com/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(contact),
@@ -99,3 +99,4 @@ export default function AddContact() {
     </div>
   );
 }
+
